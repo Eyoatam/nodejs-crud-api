@@ -1,19 +1,28 @@
 {
-	"name": "node-prayer-api",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"start": "node server.js",
-		"dev": "nodemon server.js"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"devDependencies": {
-		"nodemon": "^2.0.5"
-	},
-	"dependencies": {
-		"uuid": "^8.3.1"
-	}
+  "name": "node-prayer-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.5"
+  },
+  "dependencies": {
+    "mongoose": "^5.10.9",
+    "uuid": "^8.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eyoatam/nodejs-rest-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Eyoatam/nodejs-rest-api/issues"
+  },
+  "homepage": "https://github.com/Eyoatam/nodejs-rest-api#readme",
+  "description": ""
 }

@@ -37,12 +37,20 @@ async function addNewPrayer(req, res) {
 	try {
 		let body = await getPostData(req);
 
-		const { title, description, rating } = JSON.parse(body);
+		const {
+			chat_id,
+			username,
+			first_name,
+			last_name,
+			phone_number,
+		} = JSON.parse(body);
 
 		const prayer = {
-			title,
-			description,
-			rating,
+			chat_id,
+			username,
+			first_name,
+			last_name,
+			phone_number,
 		};
 		const newPrayer = await Prayer.create(prayer);
 
@@ -84,31 +92,31 @@ async function updatePrayer(req, res, id) {
 
 // @desc Delete Prayer
 // @route DELETE /api/prayers/:id
-async function deletePrayer(req, res, id) {
-	try {
-		const prayer = await Prayer.findById(id);
+// async function deletePrayer(req, res, id) {
+// 	try {
+// 		const prayer = await Prayer.findById(id);
 
-		if (!prayer) {
-			res.writeHead(404, { "Content-Type": "application/json" });
-			res.end(JSON.stringify({ message: "Bad request, Prayer Not Found" }));
-		} else {
-			await Prayer.remove(id);
-			res.writeHead(200, { "Content-Type": "application/json" });
-			res.end(
-				JSON.stringify({
-					message: `Product With the Id ${id} has been removed`,
-				})
-			);
-		}
-	} catch (error) {
-		console.log(error);
-	}
-}
+// 		if (!prayer) {
+// 			res.writeHead(404, { "Content-Type": "application/json" });
+// 			res.end(JSON.stringify({ message: "Bad request, Prayer Not Found" }));
+// 		} else {
+// 			await Prayer.remove(id);
+// 			res.writeHead(200, { "Content-Type": "application/json" });
+// 			res.end(
+// 				JSON.stringify({
+// 					message: `Product With the Id ${id} has been removed`,
+// 				})
+// 			);
+// 		}
+// 	} catch (error) {
+// 		console.log(error);
+// 	}
+// }
 
 module.exports = {
 	getPrayers,
 	getPrayer,
 	addNewPrayer,
 	updatePrayer,
-	deletePrayer,
+	// deletePrayer,
 };
