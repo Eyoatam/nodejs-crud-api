@@ -33,18 +33,18 @@ function update(id, prayer) {
 	});
 }
 
-// function remove(id) {
-// 	return new Promise((resolve, reject) => {
-// 		prayers = prayers.filter((p) => p.id !== id);
-// 		writeData("./data/prayers.json", prayers);
-// 		resolve();
-// 	});
-// }
+function remove(id) {
+	return new Promise((resolve, reject) => {
+		prayers = prayers.filter((p) => p.id !== id);
+		writeData("./data/prayers.json", prayers);
+		resolve();
+	});
+}
 
 module.exports = {
 	findAll,
 	findById,
 	create,
 	update,
-	// remove,
+	remove,
 };
