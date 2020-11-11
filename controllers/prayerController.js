@@ -90,13 +90,8 @@ async function updatePrayer(req, res, id) {
 	}
 }
 
-<<<<<<< HEAD
 // @desc Delete Prayer
 // @route DELETE /api/prayers/:id
-=======
-@desc Delete Prayer
-@route DELETE /api/prayers/:id
->>>>>>> 2455ecadbed2ffc0b73f312ea1b83bc962a341ef
 async function deletePrayer(req, res, id) {
 	try {
 		const prayer = await Prayer.findById(id);
