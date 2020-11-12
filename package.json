@@ -13,7 +13,7 @@
     "nodemon": "^2.0.5"
   },
   "dependencies": {
-    "mongoose": "^5.10.9",
+    "mongoose": "^5.10.13",
     "uuid": "^8.3.1"
   },
   "repository": {
