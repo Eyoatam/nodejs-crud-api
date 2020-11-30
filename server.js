@@ -1,4 +1,3 @@
-const { read } = require("fs");
 const http = require("http");
 const {
 	getPrayers,
