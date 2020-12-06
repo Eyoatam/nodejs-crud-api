@@ -1,4 +1,3 @@
-const { rejects } = require("assert");
 const fs = require("fs");
 
 function writeData(filename, content) {
@@ -7,6 +6,10 @@ function writeData(filename, content) {
 			console.log(err);
 		}
 	});
+}
+
+function createUser(name, age) {
+	return `${name} is ${age} years old`;
 }
 
 function getPostData(req) {
@@ -29,4 +32,5 @@ function getPostData(req) {
 module.exports = {
 	writeData,
 	getPostData,
+	createUser,
 };
